@@ -20,10 +20,10 @@ const connectDB = async () => {
 app.use("/api/users", userRoute);
 app.use("/api/transactions", transactionsRoute);
 
-app.use("/", express.static("client/build"));
+app.use(express.static(path.join(__dirname, "./client/build")));
 app.get("*", function(req, res) {
-    res.sendFile(path.resolve(__dirname, "client/build/index.html"));
-})
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 app.listen(port, function() {
     console.log(`Server running on port ${port}`);
