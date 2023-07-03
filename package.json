@@ -1,0 +1,21 @@
+{
+  "name": "expensetracker_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ",
+    "client-install": "npm install --prefix client",
+    "dev": "concurrently \"npm start\" \"npm run client\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.3.1",
+    "nodemon": "^2.0.22"
+  }
+ }
